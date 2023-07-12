@@ -53,10 +53,10 @@
     <tbody><tr>
         <td rowspan="2">&nbsp;&nbsp;</td>
         <td rowspan="2" width="104" valign="TOP"><img alt="Jeeves, at your service" src="{{ url_for('static', filename='img/logoleft.gif') }}" width="104" vspace="4" height="204"><br>
-        <font class="sm"><br><br>Featuring sites ranked by <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/">popularity</a></font><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/"><img src="src/5men.gif" vspace="2" border="0"></a></td>
-        <td valign="top"><img src="src/logoright.gif" alt="Ask Jeeves (SM)" width="103" vspace="4" height="70"></td>
+        <font class="sm"><br><br>Featuring sites ranked by <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/">popularity</a></font><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/"><img src="{{ url_for('static', filename='img/5men.gif') }}" vspace="2" border="0"></a></td>
+        <td valign="top"><img src="{{ url_for('static', filename='img/logoright.gif') }}" alt="Ask Jeeves (SM)" width="103" vspace="4" height="70"></td>
         <td nowrap="nowrap" align="center"><font size="4" face="Arial, Helvetica" color="#CC0000"><b>Need a Hero Image? Just<br>type it in and click Ask!</b></font></td>
-        <td align="center"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/main/ct.asp?to=http://ad.doubleclick.net/clk;1225507;4242638;c?http%3A%2F%2Fpj%2Eask%2Ecom%2Fe%2Dcentives%2Fpromo%2Easp&amp;id=209.247.40.207"><img src="{{ url_for('static', filename='html/ecentivesbox.html') }}" alt="Ecentives" width="140" vspace="4" hspace="2" height="60" border="0"></a><img src="src/ellipse6%3bsz=1x1%3bord=.gif" alt="" width="1" height="1" border="0"></td>
+        <td align="center"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/main/ct.asp?to=http://ad.doubleclick.net/clk;1225507;4242638;c?http%3A%2F%2Fpj%2Eask%2Ecom%2Fe%2Dcentives%2Fpromo%2Easp&amp;id=209.247.40.207"><img src="{{ url_for('static', filename='img/buyThisBook.gif') }}" alt="Ecentives" width="140" vspace="4" hspace="2" height="60" border="0"></a><img src="{{ url_for('static', filename='img/ellipse6;sz=1x1;ord=.gif') }}" alt="" width="1" height="1" border="0"></td>
     </tr>
     <tr align="CENTER">
         <td colspan="3" width="570">
@@ -75,7 +75,7 @@
         <tr valign="MIDDLE">
             <td><form name="rotate" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp" method="GET"></form></td>
             <td bgcolor="#CCCC99"><input style="font-size: 9pt" type="TEXT" name="ask" size="50" value="How old is my dog in people years?"></td>
-            <td><input type="hidden" name="origin" value="0"><input type="hidden" name="metasearch" value="yes"><input type="hidden" name="site_name" value="Jeeves"><input name="ads" type="hidden" value=""><input type="IMAGE" src="src/ask.gif" alt="Ask!" width="36" hspace="5" height="23" border="0"></td>
+            <td><input type="hidden" name="origin" value="0"><input type="hidden" name="metasearch" value="yes"><input type="hidden" name="site_name" value="Jeeves"><input name="ads" type="hidden" value=""><input type="IMAGE" src="{{ url_for('static', filename='img/ask.gif') }}" alt="Ask!" width="36" hspace="5" height="23" border="0"></td>
             <td></td>
         </tr>
         </tbody></table>
@@ -83,7 +83,7 @@
         <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="FFFFCC">
         <tbody><tr valign="TOP">
             <td>&nbsp;</td>
-            <td width="1"><img src="src/slashLeft.gif" width="9" height="110"></td>
+            <td width="1"><img src="{{ url_for('static', filename='img/slashleft.gif') }} width="9" height="110"></td>
             <td bgcolor="#E3E3A7">
                 <table width="100%" cellspacing="2" cellpadding="0" border="0">
                 <tbody><tr>
@@ -118,7 +118,7 @@
                 </tr>
                 </tbody></table>
             </td>
-            <td rowspan="2"><img src="src/slashRight.gif" width="8" height="110"></td>
+            <td rowspan="2"><img src="{{ url_for('static', filename='img/slashRight.gif') }}" width="8" height="110"></td>
             <td>&nbsp;</td>
         </tr>
         </tbody></table><font size="1">&nbsp;</font></td>
@@ -148,7 +148,7 @@
     <ilayer width="468" height="60" visibility="hide" id="jb1"></ilayer>
     </td>
     <td align="RIGHT">
-    <a href="https://web.archive.org/web/20010119004500/http://ad.doubleclick.net/jump/aj.com.homepage/homepage;sz=120x60;ord=118138139"><img src="src/homepage%3bsz=120x60%3bord=118138139.gif" width="120" height="60" border="0"></a><!--
+    <a href="https://web.archive.org/web/20010119004500/http://ad.doubleclick.net/jump/aj.com.homepage/homepage;sz=120x60;ord=118138139"><img src=""{{ url_for('static', filename='img/homepage;sz=120x60;ord=118138139.gif') }}"" width="120" height="60" border="0"></a><!--
     
     --></td>
     </tr>
