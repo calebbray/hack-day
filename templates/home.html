@@ -2,7 +2,7 @@
     <title>Ask Jeeves - Ask.com</title>
     <meta name="KEYWORDS" content="Ask Jeeves; AskJeeves; Jeeves; search; plain English; search engine; metasearch; natural language;">
     <meta name="DESCRIPTION" content="Ask Jeeves! - Search the web in plain English! The fastest and easiest place to find answers online!">
-    <link rel="STYLESHEET" href="src/ajstyle.css" type="text/css">
+    <link rel="STYLESHEET" href="{{ url_for('static', filename='css/ajstyle.css') }}" type="text/css">
     <style type="TEXT/CSS">
     <!--
     .bNav {font-family: Arial, Helvetica; font-size:9pt; font-weight: 800; line-height: 110%; text-decoration: none; color: #333333}
@@ -64,7 +64,7 @@
         <tbody><tr>
             <td><form method="GET" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp"></form></td>
             <td bgcolor="#CCCC99"><input name="ask" size="43" maxsize="255"><input name="origin" type="hidden" value="0"><input name="site_name" type="hidden" value="Jeeves"><input name="metasearch" type="hidden" value="yes"><input name="ads" type="hidden" value=""></td>
-            <td><input src="src/ask.gif" type="image" name="Ask!" width="36" height="23" border="0"></td>
+            <td><input src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></td>
             <td></td>
         </tr>
         </tbody></table>
@@ -83,7 +83,7 @@
         <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="FFFFCC">
         <tbody><tr valign="TOP">
             <td>&nbsp;</td>
-            <td width="1"><img src="{{ url_for('static', filename='img/slashleft.gif') }} width="9" height="110"></td>
+            <td width="1"><img src="{{ url_for('static', filename='img/slashLeft.gif') }}" width="9" height="110"></td>
             <td bgcolor="#E3E3A7">
                 <table width="100%" cellspacing="2" cellpadding="0" border="0">
                 <tbody><tr>
@@ -147,8 +147,6 @@
     </iframe></nolayer>
     <ilayer width="468" height="60" visibility="hide" id="jb1"></ilayer>
     </td>
-    <td align="RIGHT">
-    <a href="https://web.archive.org/web/20010119004500/http://ad.doubleclick.net/jump/aj.com.homepage/homepage;sz=120x60;ord=118138139"><img src=""{{ url_for('static', filename='img/homepage;sz=120x60;ord=118138139.gif') }}"" width="120" height="60" border="0"></a><!--
     
     --></td>
     </tr>
@@ -158,7 +156,7 @@
     </tbody></table>
     </div>
     </layer><!--<FONT SIZE=-222></FONT>-->
-    <img src="src/i.gif" width="1" height="1">
+    <img src="{{ url_for('static', filename='img/i.gif') }}" width="1" height="1">
     
     
     </body></html>
