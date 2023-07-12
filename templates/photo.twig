@@ -80,6 +80,7 @@
       <tr align="CENTER">
         <td colspan="3" width="570">
           <h3>Put your image and stuff here</h3>
+          <img id="jeeves-says" src="" />
         </td>
         <td rowspan="2"><img src="{{ url_for('static', filename='img/slashRight.gif') }}" width="8" height="110"></td>
         <td>&nbsp;</td>
@@ -149,8 +150,21 @@
 
 
 <script>
-  const h3 = document.querySelector('h3');
-  console.log(h3)
+  window.addEventListener("load", function () {
+    const params = new URLSearchParams(location.search);
+    const formattedParams = {};
+
+    for (const [k, v] of params) {
+      formattedParams[k] = v;
+    }
+
+    loadImage(formattedParams).then(data => {
+      const image = document.getElementById('jeeves-says');
+      if (image) {
+        image.src = data;
+      }
+    });
+  })
 </script>
 </body>
 
