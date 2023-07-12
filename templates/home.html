@@ -15,10 +15,12 @@
     <script>
         function updateDropdown() {
             var dropdown = document.getElementById('myDropdown');
+            var dropdowndiv = document.getElementById('dropdown-div');
             var radioValue = document.querySelector('input[name="list"]:checked').value;
 
             // Clear previous options
             dropdown.innerHTML = '';
+            dropdowndiv.style.visibility='visible'
 
             // Populate dropdown based on radio button value
             if (radioValue === 'SOC') {
@@ -3786,7 +3788,7 @@
                 <input type="radio" name="list" value="ONET" onchange="updateDropdown()"> ONET
 
             <h3>Select an Occupation:</h3>
-            <div style="display: flex; justify-content: center; align-items: center;"></div>
+            <div id="dropdown-div" style="display: flex; justify-content: center; align-items: center; visibility: hidden;"></div>
                 <select id="myDropdown" selected="SOC"><input id="ask-1" src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></select>
             </div>
         </td>
