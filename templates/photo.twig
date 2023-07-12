@@ -79,7 +79,7 @@
       </tr>
       <tr align="CENTER">
         <td colspan="3" width="570">
-          <h3>Put your image and stuff here</h3>
+          <h3 id="loader">Loading a beautiful image...</h3>
           <img id="jeeves-says" src="" />
         </td>
         <td rowspan="2"><img src="{{ url_for('static', filename='img/slashRight.gif') }}" width="8" height="110"></td>
@@ -159,6 +159,8 @@
     }
 
     loadImage(formattedParams).then(data => {
+      const loader = document.getElementById('loader');
+      loader.remove();
       const image = document.getElementById('jeeves-says');
       if (image) {
         image.src = data;

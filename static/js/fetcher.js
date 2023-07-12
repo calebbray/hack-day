@@ -1,4 +1,5 @@
 function requestAIImage(params) {
+  const searchTerm = getSearchPrompt(params);
   return fetch("https://stablediffusionapi.com/api/v3/text2img", {
     method: "POST",
     headers: {
@@ -6,8 +7,9 @@ function requestAIImage(params) {
     },
     body: JSON.stringify({
       key: "hPirRJ8gJ6KrtHfp0hhGC1B5D55f2BVb8BDQK6kgJ5qUA6eSL6o0J0wqwWaf",
-      prompt:
-        "ultra realistic ((doctors)), action, white, caucasian, 1995, comedic, work, christian, holy, professional, jesus, family, pixar, hyper detail, Canon EOS R3, nikon, f/1.4, ISO 200, 1/160s, 8K, RAW, unedited, symmetrical balance, in-frame, 8K, cell-shaded",
+      prompt: `((${searchTerm})), action, white, caucasian, 1995, comedic, work, christian, holy, professional, jesus, family, pixar, hyper detail, Canon EOS R3, nikon, f/1.4, ISO 200, 1/160s, 8K, RAW, unedited, symmetrical balance, in-frame, 8K, cell-shaded ${Math.floor(
+        Math.random() * 100
+      )}`,
       negative_prompt:
         "((out of frame)), ((extra fingers)), mutated hands, ((poorly drawn hands)), ((poorly drawn face)), (((mutation))), (((deformed))), (((tiling))), ((naked)), ((tile)), ((fleshpile)), (((abstract))), blurry, ((bad anatomy)), ((bad proportions)), ((extra limbs)), cloned face, (((skinny))), glitchy, ((extra breasts)), ((double torso)), ((extra arms)), ((extra hands)), ((mangled fingers)), ((missing breasts)), (missing lips), ((extra legs)), ((ugly)), anime",
       width: "1080",
@@ -24,9 +26,16 @@ function requestAIImage(params) {
   });
 }
 
+function getSearchPrompt(params) {
+  const { q } = params;
+  const [code, ...rest] = q.split(" ");
+  return rest.join(" ");
+}
+
 async function getThatThing(params) {
   const response = await requestAIImage(params);
   if (response.status === "success") {
+    console.log(response.output);
     return response.output[0];
   }
 
