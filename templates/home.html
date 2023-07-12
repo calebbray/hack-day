@@ -108,7 +108,7 @@
 
             <h3>Select an Occupation:</h3>
             <div style="display: flex; justify-content: center; align-items: center;"></div>>
-                <select id="myDropdown" selected="SOC"><input src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></select>
+                <select id="myDropdown" selected="SOC"><input id="ask-1" src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></select>
             </div>
         </td>
         </tr>
@@ -227,6 +227,12 @@
           AJH = window.innerHeight;
           window.onresize = AJR;
         }
+
+        var imageButton = document.getElementById('ask-1');
+        imageButton.addEventListener('click', function() {
+            var dropdown = document.getElementById('myDropdown');
+            window.location.href = '/photo?q=' + dropdown.value;
+        });
     </script></table>
     </div>
     </layer><!--<FONT SIZE=-222></FONT>-->
