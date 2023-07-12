@@ -1,7 +1,10 @@
 function requestAIImage(params) {
   const searchTerm = getSearchPrompt(params);
-
+//allen key
   //hPirRJ8gJ6KrtHfp0hhGC1B5D55f2BVb8BDQK6kgJ5qUA6eSL6o0J0wqwWaf
+
+//alf key
+// lyQs7tmWjYfRF7ETngntnf3wPHAL7eT4PU337PQgEAIzBTo9ZQviLRy6eBi1
   return fetch("https://stablediffusionapi.com/api/v3/text2img", {
     method: "POST",
     headers: {
@@ -32,6 +35,7 @@ function getSearchPrompt(params) {
 
 async function getThatThing(params) {
   const response = await requestAIImage(params);
+  
   if (response.status === "success" && response.output.length) {
     console.log(response.output[0]);
     return response.output[0];
