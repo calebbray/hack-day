@@ -12,32 +12,71 @@
     .hdr {font-family: Arial, Helvetica; font-size: 10pt; font-weight: 800}
     -->
     </style>
-    <script language="JavaScript">
-    <!--
-    var txt = new Array("Where is the fun Web site The Kiss.com?","Where is the fun Web site Iron Chef?","What is my birthstone, and what does it mean?","Where is the fun Web site Love Calculator?","How will I die?","How can I become a rock star?","Where can I get an astrological birth chart?","Where is the fun Web site Baby Name Chooser?","How old is my dog in people years?");
-    var j = txt.length;
-    var i = 0;
-    while(txt[j-1] == "") --count;
-    function scroll() { 
-    if (j != null) {
-     if (document.rotate) {
-      document.rotate.ask.value = txt[i++];
-      if (i > j-1) i = 0;
-     }
-     setTimeout ("scroll()", 3500);
-    }
-    }
-    
-    n=navigator;
-    function AJR() { if(AJW != innerWidth || AJH != innerHeight) location.reload(); }
-    if(n.appName=="Netscape" && parseInt(n.appVersion)==4) {AJW=innerWidth; AJH=innerHeight; onresize=AJR;}
-    
-    // -->
+    <script>
+        function updateDropdown() {
+            var dropdown = document.getElementById('myDropdown');
+            var radioValue = document.querySelector('input[name="list"]:checked').value;
+
+            // Clear previous options
+            dropdown.innerHTML = '';
+
+            // Populate dropdown based on radio button value
+            if (radioValue === 'SOC') {
+                var list1 = [
+'                00-0000  All Occupations',
+                '11-0000  Management Occupations',
+                '13-0000  Business and Financial Operations Occupations',
+                '15-0000  Computer and Mathematical Occupations',
+                '17-0000  Architecture and Engineering Occupations',
+                '19-0000  Life, Physical, and Social Science Occupations',
+                '21-0000  Community and Social Service Occupations',
+                '23-0000  Legal Occupations',
+                '25-0000  Educational Instruction and Library Occupations',
+                '27-0000  Arts, Design, Entertainment, Sports, and Media Occupations',
+                '29-0000  Healthcare Practitioners and Technical Occupations',
+                '31-0000  Healthcare Support Occupations',
+                '33-0000  Protective Service Occupations',
+                '35-0000  Food Preparation and Serving Related Occupations',
+                '37-0000  Building and Grounds Cleaning and Maintenance Occupations',
+                '39-0000  Personal Care and Service Occupations',
+                '41-0000  Sales and Related Occupations',
+                '43-0000  Office and Administrative Support Occupations',
+                '45-0000  Farming, Fishing, and Forestry Occupations',
+                '47-0000  Construction and Extraction Occupations',
+                '49-0000  Installation, Maintenance, and Repair Occupations',
+                '51-0000  Production Occupations',
+                '53-0000  Transportation and Material Moving Occupations']
+                for (var i = 0; i < list1.length; i++) {
+                    var option = document.createElement('option');
+                    option.text = list1[i];
+                    dropdown.add(option);
+                }
+            } else if (radioValue === 'NAICS') {
+                var list2 = ['Choice 1', 'Choice 2', 'Choice 3'];
+                for (var j = 0; j < list2.length; j++) {
+                    var option = document.createElement('option');
+                    option.text = list2[j];
+                    dropdown.add(option);
+                }
+            } else if (radioValue === 'ONET') {
+                var list3 = ['Item 1', 'Item 2', 'Item 3'];
+                for (var k = 0; k < list3.length; k++) {
+                    var option = document.createElement('option');
+                    option.text = list3[k];
+                    dropdown.add(option);
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            // Call updateDropdown with the value of the first list (list1)
+            updateDropdown('SOC');
+        });
     </script>
     </head>
     <div align="center">
     
-            <table id="topNav" width="680" cellspacing="0" cellpadding="2" border="0" bgcolor="#666699">
+            <table id="topNav" width="100%" cellspacing="0" cellpadding="2" border="0" bgcolor="#666699">
              <tbody><tr align="center">
                 <td bgcolor="#cccc99"><a class="tNavHi" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/"><font color="black">Ask Jeeves Home</font></a></td>
                 <td><a class="tNav" href="https://web.archive.org/web/20010119004500/http://services.ask.com/shopping"><font color="white">Shopping</font></a></td>
@@ -49,32 +88,38 @@
              </tr>
             </tbody></table>
             
-    <table width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFFFCC">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFFFCC">
     <tbody><tr>
         <td rowspan="2">&nbsp;&nbsp;</td>
         <td rowspan="2" width="104" valign="TOP"><img alt="Jeeves, at your service" src="{{ url_for('static', filename='img/logoleft.gif') }}" width="104" vspace="4" height="204"><br>
         <font class="sm"><br><br>Featuring sites ranked by <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/">popularity</a></font><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/"><img src="{{ url_for('static', filename='img/5men.gif') }}" vspace="2" border="0"></a></td>
         <td valign="top"><img src="{{ url_for('static', filename='img/logoright.gif') }}" alt="Ask Jeeves (SM)" width="103" vspace="4" height="70"></td>
-        <td nowrap="nowrap" align="center"><font size="4" face="Arial, Helvetica" color="#CC0000"><b>Need a Hero Image? Just<br>type it in and click Ask!</b></font></td>
+        <td nowrap="nowrap" align="center"><font size="4" face="Arial, Helvetica" color="#CC0000"><b>Need a Hero Image? Just select a taxonomy and occupation and click Ask!</b></font></td>
         <td align="center"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/main/ct.asp?to=http://ad.doubleclick.net/clk;1225507;4242638;c?http%3A%2F%2Fpj%2Eask%2Ecom%2Fe%2Dcentives%2Fpromo%2Easp&amp;id=209.247.40.207"><img src="{{ url_for('static', filename='img/buyThisBook.gif') }}" alt="Ecentives" width="140" vspace="4" hspace="2" height="60" border="0"></a><img src="{{ url_for('static', filename='img/ellipse6;sz=1x1;ord=.gif') }}" alt="" width="1" height="1" border="0"></td>
     </tr>
     <tr align="CENTER">
         <td colspan="3" width="570">
         <table cellspacing="4" cellpadding="2" border="0">
         <tbody><tr>
-            <td><form method="GET" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp"></form></td>
-            <td bgcolor="#CCCC99"><input name="ask" size="43" maxsize="255"><input name="origin" type="hidden" value="0"><input name="site_name" type="hidden" value="Jeeves"><input name="metasearch" type="hidden" value="yes"><input name="ads" type="hidden" value=""></td>
-            <td><input src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></td>
-            <td></td>
+            <h3>Select a Taxonomy:</h3>
+                <input type="radio" name="list" value="SOC" onchange="updateDropdown()"> SOC
+                <input type="radio" name="list" value="NAICS" onchange="updateDropdown()"> NAICS
+                <input type="radio" name="list" value="ONET" onchange="updateDropdown()"> ONET
+
+            <h3>Select an Occupation:</h3>
+            <div style="display: flex; justify-content: center; align-items: center;"></div>>
+                <select id="myDropdown" selected="SOC"><input src="{{ url_for('static', filename='img/ask.gif') }}" type="image" name="Ask!" width="36" height="23" border="0"></select>
+            </div>
+        </td>
         </tr>
         </tbody></table>
         <table cellspacing="0" cellpadding="1" border="0">
         <tbody><tr>
-            <td colspan="4"><font class="dirs">Recent questions about <font color="#CC0000">Recreation:</font></font><font size="5">&nbsp;</font></td>
+            <td colspan="4"><font class="dirs">Recent Hero Image searches for <font color="#CC0000">SOC Codes:</font></font><font size="5">&nbsp;</font></td>
         </tr>
         <tr valign="MIDDLE">
             <td><form name="rotate" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp" method="GET"></form></td>
-            <td bgcolor="#CCCC99"><input style="font-size: 9pt" type="TEXT" name="ask" size="50" value="How old is my dog in people years?"></td>
+            <td bgcolor="#CCCC99"><input id="ask" style="font-size: 9pt" type="TEXT" name="ask" size="50" value="45-2099  Agricultural Workers, All Other"></td>
             <td><input type="hidden" name="origin" value="0"><input type="hidden" name="metasearch" value="yes"><input type="hidden" name="site_name" value="Jeeves"><input name="ads" type="hidden" value=""><input type="IMAGE" src="{{ url_for('static', filename='img/ask.gif') }}" alt="Ask!" width="36" hspace="5" height="23" border="0"></td>
             <td></td>
         </tr>
@@ -124,7 +169,7 @@
         </tbody></table><font size="1">&nbsp;</font></td>
     </tr>
     </tbody></table>
-    <table width="680" cellspacing="0" cellpadding="3" border="0" bgcolor="#CCCC99">
+    <table width="100%" cellspacing="0" cellpadding="3" border="0" bgcolor="#CCCC99">
     <tbody><tr align="CENTER"> 
         <td width="60"><a class="bNav" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/">About</a></td>
         <td><a href="https://web.archive.org/web/20010119004500/http://corporate.ask.com/" class="bNav">Ask Jeeves Business Solutions</a></td>
@@ -133,7 +178,7 @@
         <td><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/affiliates/index.asp" class="bNav">Become an Affiliate</a></td>
     </tr>
     </tbody></table>
-    <table width="680" cellspacing="0" cellpadding="3" border="0">
+    <table width="100%" cellspacing="0" cellpadding="3" border="0">
     <tbody><tr valign="TOP">
     <td>
     <nolayer>
@@ -147,13 +192,42 @@
     </iframe></nolayer>
     <ilayer width="468" height="60" visibility="hide" id="jb1"></ilayer>
     </td>
-    
-    --></td>
+    </td>
     </tr>
     <tr>
     <td colspan="2"><font size="1" color="#666666"><font size="1"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/policy.html">Editorial Guidelines for Answers</a><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/privacy.html">Privacy Statement</a><br>� 1996-2001 Ask Jeeves, Inc. <br>ASK JEEVES, ASK.COM and the JEEVES DESIGN are service marks of Ask Jeeves, Inc.<br>All other brands are property of their respective owners. Patent pending.</font><br></font></td>
     </tr>
-    </tbody></table>
+    </tbody>
+    <script>
+        var txt = ["25-0000  Educational Instruction and Library Occupations", "47-0000  Construction and Extraction Occupations", "33-0000  Protective Service Occupations", "27-0000  Arts, Design, Entertainment, Sports, and Media Occupations"];
+        var j = txt.length;
+        var i = 0;
+        
+        function scroll() {
+          if (j !== null) {
+            if (document.getElementById("ask")) {
+              document.getElementById("ask").value = txt[i++];
+              if (i > j - 1) i = 0;
+            }
+            setTimeout(scroll, 3500);
+          }
+        }
+        
+        window.addEventListener("load", scroll);
+        
+        function AJR() {
+          if (AJW !== window.innerWidth || AJH !== window.innerHeight) {
+            location.reload();
+          }
+        }
+        
+        var n = navigator;
+        if (n.appName === "Netscape" && parseInt(n.appVersion) === 4) {
+          AJW = window.innerWidth;
+          AJH = window.innerHeight;
+          window.onresize = AJR;
+        }
+    </script></table>
     </div>
     </layer><!--<FONT SIZE=-222></FONT>-->
     <img src="{{ url_for('static', filename='img/i.gif') }}" width="1" height="1">
