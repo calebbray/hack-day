@@ -39,5 +39,7 @@ async function getThatThing(params) {
 }
 
 async function loadImage(params) {
+  let p = document.getElementById("occ-text");
+  p.innerText = getSearchPrompt(params);
   return getThatThing(params);
 }
