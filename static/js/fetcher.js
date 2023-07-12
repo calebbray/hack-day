@@ -6,7 +6,7 @@ function requestAIImage(params) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      key: "hPirRJ8gJ6KrtHfp0hhGC1B5D55f2BVb8BDQK6kgJ5qUA6eSL6o0J0wqwWaf",
+      key: "lyQs7tmWjYfRF7ETngntnf3wPHAL7eT4PU337PQgEAIzBTo9ZQviLRy6eBi1",
       prompt: `((${searchTerm})) hyper detail, Canon EOS R3, nikon, f/1.4, ISO 200`,
       width: "1080",
       height: "360",
