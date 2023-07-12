@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<title>404: file Not Found</title>
+<meta name="robots" content="NOINDEX" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="http://www.ask.com/includes/ajstyle.css" type="text/css" />
+</head>
+<body bgcolor="white">
+<table id="topNav" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#000099">  
+	<tr align="right"> 
+		<td bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+   	<td colspan="5"><span class="uninavtext-onblue">
+		<a href="static.wc.ask.com/docs/about/" class="uninavtext-onblue">About</a> 
+      | <a href="static.wc.ask.com/docs/help/" class="uninavtext-onblue">Help</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      </span></td>
+		<td bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+	</tr>
+	<tr> 
+		<td bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+   	<td colspan="5"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" width="20" height="1" /></td>
+		<td bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+	</tr>
+	<tr>
+		<td width="10" bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+		<td width="146" valign="bottom"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" width="146" height="26" border="0" /></td>
+
+		<td width="132"><a href="/"><img src="http://a692.g.akamai.net/7/692/809/34213a4dfa3f5e/ask.com/i/uninav/home-off.gif" width="132" height="26" alt="Ask Jeeves Home" border="0" /></a></td>
+		<td width="137"><a href="/channels"><img src="http://a692.g.akamai.net/7/692/809/e5c41db3167122/ask.com/i/uninav/browse_by_subject-off.gif" width="137" height="26" alt="Browse By Subject" border="0" /></a></td>
+		<td width="132"><a href="/community/browseAnswerPoint.asp"><img src="http://a692.g.akamai.net/7/692/809/b04ac7e35bab35/ask.com/i/uninav/ask_other_people-off.gif" width="132" height="26" alt="Ask Other People" border="0" /></a></td>
+		<td width="124"><a href="http://services.ask.com/shopping"><img src="http://a692.g.akamai.net/7/692/809/0ce5689ea787e9/ask.com/i/uninav/shopping-off.gif" width="124" height="26" alt="Shopping Guide" border="0" /></a></td>
+		<td width="99%" bgcolor="#000099"><img src="http://a692.g.akamai.net/7/692/809/d992dae2dbbe35/ask.com/i/pixl.gif" border="0" width="10" height="1" /></td> 
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="top"> 
+		<td> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="2">
+        <tr valign=TOP>
+          <td>&nbsp;</td>
+          <td> 
+            
+	  <p>&nbsp;<font class="breadHdr">You are here: </font><font class="bread"><a href="http://www.ask.com">Ask 
+	   Jeeves Home</a> > Error</font></p>
+            
+	  <p><b><font size="5" COLOR="#666699" face="Arial, Helvetica, sans-serif">Oops!</font></b></p>
+            
+	  <p>An error has occurred on this page. This could be a temporary condition. 
+	   The page may appear correctly if you tried it again.</p>
+	  <p>We apologize for the inconvenience.</p>
+	  <p>If you would like to kindly report this error, please send an email to 
+	   <font face="Times New Roman, Times, serif"><a href="mailto:jeeves@askjeeves.com">jeeves@askjeeves.com</a></font>. 
+	   In order to help us fix the problem, please include in your email details 
+	   such as the web address (URL) of the page you were at previously and what 
+	   question you asked or what link you clicked on that page just before receiving 
+	   this message. You may also include which operating system you are using 
+	   (e.g., Windows 98, Mac OS 8.6, etc.) and which browser type and version 
+	   (for example, Microsoft Internet Explorer 4.5, or Netscape Navigator 4.72). 
+	  </p>
+	  <p><b><font size="2" face="Arial, Helvetica, sans-serif">&lt;&lt;</font></b> 
+	   <b><a href="javascript:history.go(-1)">Back</a></b></p>
+	  </td>
+        </tr>
+      </table>
+		</td>
+	</tr>
+</table>
+</html>

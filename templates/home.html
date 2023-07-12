@@ -1,34 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Modern Page</title>
-
-    <!-- Water.css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-
-    <!-- Custom CSS -->
-    <style>
-        /* Add your custom CSS styles here */
+<html><head>
+    <title>Ask Jeeves - Ask.com</title>
+    <meta name="KEYWORDS" content="Ask Jeeves; AskJeeves; Jeeves; search; plain English; search engine; metasearch; natural language;">
+    <meta name="DESCRIPTION" content="Ask Jeeves! - Search the web in plain English! The fastest and easiest place to find answers online!">
+    <link rel="STYLESHEET" href="src/ajstyle.css" type="text/css">
+    <style type="TEXT/CSS">
+    <!--
+    .bNav {font-family: Arial, Helvetica; font-size:9pt; font-weight: 800; line-height: 110%; text-decoration: none; color: #333333}
+    A.bNav:hover {text-decoration: underline; color: blue}
+    .dirs {font-family: Arial, Helvetica; font-size: 10pt}
+    .sm {font-family: Arial, Helvetica; font-size: 7.5pt; color: black}
+    .hdr {font-family: Arial, Helvetica; font-size: 10pt; font-weight: 800}
+    -->
     </style>
-</head>
-<body>
-    <header class="water-header">
-        <h1>My Website</h1>
-        <nav class="water-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="water-container">
-        <h1>Welcome to My Modern Page</h1>
-        <p>This is a sample text. Replace it with your content.</p>
+    <script language="JavaScript">
+    <!--
+    var txt = new Array("Where is the fun Web site The Kiss.com?","Where is the fun Web site Iron Chef?","What is my birthstone, and what does it mean?","Where is the fun Web site Love Calculator?","How will I die?","How can I become a rock star?","Where can I get an astrological birth chart?","Where is the fun Web site Baby Name Chooser?","How old is my dog in people years?");
+    var j = txt.length;
+    var i = 0;
+    while(txt[j-1] == "") --count;
+    function scroll() { 
+    if (j != null) {
+     if (document.rotate) {
+      document.rotate.ask.value = txt[i++];
+      if (i > j-1) i = 0;
+     }
+     setTimeout ("scroll()", 3500);
+    }
+    }
+    
+    n=navigator;
+    function AJR() { if(AJW != innerWidth || AJH != innerHeight) location.reload(); }
+    if(n.appName=="Netscape" && parseInt(n.appVersion)==4) {AJW=innerWidth; AJH=innerHeight; onresize=AJR;}
+    
+    // -->
+    </script>
+    </head>
+    <div align="center">
+    
+            <table id="topNav" width="680" cellspacing="0" cellpadding="2" border="0" bgcolor="#666699">
+             <tbody><tr align="center">
+                <td bgcolor="#cccc99"><a class="tNavHi" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/"><font color="black">Ask Jeeves Home</font></a></td>
+                <td><a class="tNav" href="https://web.archive.org/web/20010119004500/http://services.ask.com/shopping"><font color="white">Shopping</font></a></td>
+                <td><a class="tNav" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/community/browseAnswerPoint.asp"><font color="white">Answer Point</font></a></td>
+                <td><font class="tNav">&nbsp; &nbsp; <a class="tNav" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/help/"><font color="white">Help</font></a> &nbsp; &nbsp;</font></td>
+             </tr>
+             <tr bgcolor="#CCCC99">
+                <td colspan="4"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td></td></tr></tbody></table></td>
+             </tr>
+            </tbody></table>
+            
+    <table width="680" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFFFCC">
+    <tbody><tr>
+        <td rowspan="2">&nbsp;&nbsp;</td>
+        <td rowspan="2" width="104" valign="TOP"><img alt="Jeeves, at your service" src="{{ url_for('static', filename='img/logoleft.gif') }}" width="104" vspace="4" height="204"><br>
+        <font class="sm"><br><br>Featuring sites ranked by <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/">popularity</a></font><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/popularity/"><img src="src/5men.gif" vspace="2" border="0"></a></td>
+        <td valign="top"><img src="src/logoright.gif" alt="Ask Jeeves (SM)" width="103" vspace="4" height="70"></td>
+        <td nowrap="nowrap" align="center"><font size="4" face="Arial, Helvetica" color="#CC0000"><b>Need a Hero Image? Just<br>type it in and click Ask!</b></font></td>
+        <td align="center"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/main/ct.asp?to=http://ad.doubleclick.net/clk;1225507;4242638;c?http%3A%2F%2Fpj%2Eask%2Ecom%2Fe%2Dcentives%2Fpromo%2Easp&amp;id=209.247.40.207"><img src="{{ url_for('static', filename='html/ecentivesbox.html') }}" alt="Ecentives" width="140" vspace="4" hspace="2" height="60" border="0"></a><img src="src/ellipse6%3bsz=1x1%3bord=.gif" alt="" width="1" height="1" border="0"></td>
+    </tr>
+    <tr align="CENTER">
+        <td colspan="3" width="570">
+        <table cellspacing="4" cellpadding="2" border="0">
+        <tbody><tr>
+            <td><form method="GET" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp"></form></td>
+            <td bgcolor="#CCCC99"><input name="ask" size="43" maxsize="255"><input name="origin" type="hidden" value="0"><input name="site_name" type="hidden" value="Jeeves"><input name="metasearch" type="hidden" value="yes"><input name="ads" type="hidden" value=""></td>
+            <td><input src="src/ask.gif" type="image" name="Ask!" width="36" height="23" border="0"></td>
+            <td></td>
+        </tr>
+        </tbody></table>
+        <table cellspacing="0" cellpadding="1" border="0">
+        <tbody><tr>
+            <td colspan="4"><font class="dirs">Recent questions about <font color="#CC0000">Recreation:</font></font><font size="5">&nbsp;</font></td>
+        </tr>
+        <tr valign="MIDDLE">
+            <td><form name="rotate" action="/web/20010119004500/http://askjeeves.com/main/askjeeves.asp" method="GET"></form></td>
+            <td bgcolor="#CCCC99"><input style="font-size: 9pt" type="TEXT" name="ask" size="50" value="How old is my dog in people years?"></td>
+            <td><input type="hidden" name="origin" value="0"><input type="hidden" name="metasearch" value="yes"><input type="hidden" name="site_name" value="Jeeves"><input name="ads" type="hidden" value=""><input type="IMAGE" src="src/ask.gif" alt="Ask!" width="36" hspace="5" height="23" border="0"></td>
+            <td></td>
+        </tr>
+        </tbody></table>
+        <font size="1">&nbsp;</font>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="FFFFCC">
+        <tbody><tr valign="TOP">
+            <td>&nbsp;</td>
+            <td width="1"><img src="src/slashLeft.gif" width="9" height="110"></td>
+            <td bgcolor="#E3E3A7">
+                <table width="100%" cellspacing="2" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td><font class="dirs">Care to explore these <font class="hdr">areas of interest</font>?</font></td>
+                    <td><font class="hdr">Favorite destinations:</font></td>
+                </tr>
+                <tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="3" border="0" bgcolor="#FFFFEE">
+                    <tbody><tr valign="TOP"> 
+                    <td nowrap="nowrap">
+                    <font class="dirs"><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Arts&amp;ad=Arts&amp;id=209.247.40.207">Arts &amp; Entertainment</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Business&amp;ad=Business&amp;id=209.247.40.207">Business</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Computers&amp;ad=Computers&amp;id=209.247.40.207">Computers</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Games&amp;ad=Games&amp;id=209.247.40.207">Games</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Health&amp;ad=Health&amp;id=209.247.40.207">Health</a></font></td>
+                    <td width="33%">
+                    <font class="dirs"><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Home&amp;ad=Family&amp;id=209.247.40.207">Home &amp; Family</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/News&amp;ad=News&amp;id=209.247.40.207">News</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Recreation&amp;ad=Recreation&amp;id=209.247.40.207">Recreation</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Reference&amp;ad=Reference&amp;id=209.247.40.207">Reference</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Regional&amp;ad=Regional&amp;id=209.247.40.207">Regional</a></font></td>
+                    <td width="33%">
+                    <font class="dirs"><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Science&amp;ad=Science&amp;id=209.247.40.207">Science</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Society&amp;ad=Society&amp;id=209.247.40.207">Society</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Sports&amp;ad=Sports&amp;id=209.247.40.207">Sports</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/Recreation/Travel&amp;ad=Travel&amp;id=209.247.40.207">Travel</a><br><a href="https://web.archive.org/web/20010119004500/http://tm.ask.com/r?t=d&amp;s=a&amp;to=/channels/index.asp?catkey=Top/World&amp;ad=World&amp;id=209.247.40.207">World</a></font></td>
+                    </tr>
+                    </tbody></table>
+                </td>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="3" border="0" bgcolor="#FFFFEE">
+                    <tbody><tr valign="TOP"> 
+                    <td width="24%" nowrap="nowrap">
+                    <font class="dirs">� <a href="https://web.archive.org/web/20010119004500/http://www.ajkids.com/">Ask Jeeves <font color="#CC0000"><b>Kids</b></font></a><br>
+                    � <a href="https://web.archive.org/web/20010119004500/http://www.ask.co.uk/">Ask Jeeves UK</a><br>
+                    � <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/JeevesStudios/">Ask Jeeves Studios</a><br>
+                    � <a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/peek">Jeeves Peek</a><br>
+                    � <a href="https://web.archive.org/web/20010119004500/http://services.ask.com/shopping/">Shopping</a></font></td>
+                    </tr>
+                    </tbody></table>
+                </td>
+                </tr>
+                </tbody></table>
+            </td>
+            <td rowspan="2"><img src="src/slashRight.gif" width="8" height="110"></td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody></table><font size="1">&nbsp;</font></td>
+    </tr>
+    </tbody></table>
+    <table width="680" cellspacing="0" cellpadding="3" border="0" bgcolor="#CCCC99">
+    <tbody><tr align="CENTER"> 
+        <td width="60"><a class="bNav" href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/">About</a></td>
+        <td><a href="https://web.archive.org/web/20010119004500/http://corporate.ask.com/" class="bNav">Ask Jeeves Business Solutions</a></td>
+        <td><a href="https://web.archive.org/web/20010119004500/http://corporate.ask.com/products/targeting.asp" class="bNav">Advertising</a></td>
+        <td><a href="https://web.archive.org/web/20010119004500/http://www.irconnect.com/askj/" class="bNav">Investor Relations</a></td>
+        <td><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/affiliates/index.asp" class="bNav">Become an Affiliate</a></td>
+    </tr>
+    </tbody></table>
+    <table width="680" cellspacing="0" cellpadding="3" border="0">
+    <tbody><tr valign="TOP">
+    <td>
+    <nolayer>
+    <iframe src="https://web.archive.org/web/20010119004500if_/http://ad.doubleclick.net/adi/aj.com.homepage/homepage;sz=468x60;ord=118138139" border="0" marginwidth="0" marginheight="0" hspace="0" vspace="0" scrolling="NO" width="468" height="60" frameborder="0">
+    &lt;a 
+    href="https://web.archive.org/web/20010119004500/http://ad.doubleclick.net/jump/aj.com.homepage/homepage;abr=!ie;abr=!webtv;sz=468x60;ord=118138139"&gt;
+    &lt;img
+     
+    src="https://web.archive.org/web/20010119004500im_/http://ad.doubleclick.net/ad/aj.com.homepage/homepage;abr=!ie;abr=!webtv;sz=468x60;ord=118138139"
+     width="468" height="60" border="0"&gt;&lt;/a&gt;
+    </iframe></nolayer>
+    <ilayer width="468" height="60" visibility="hide" id="jb1"></ilayer>
+    </td>
+    <td align="RIGHT">
+    <a href="https://web.archive.org/web/20010119004500/http://ad.doubleclick.net/jump/aj.com.homepage/homepage;sz=120x60;ord=118138139"><img src="src/homepage%3bsz=120x60%3bord=118138139.gif" width="120" height="60" border="0"></a><!--
+    
+    --></td>
+    </tr>
+    <tr>
+    <td colspan="2"><font size="1" color="#666666"><font size="1"><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/policy.html">Editorial Guidelines for Answers</a><br><a href="https://web.archive.org/web/20010119004500/http://askjeeves.com/docs/about/privacy.html">Privacy Statement</a><br>� 1996-2001 Ask Jeeves, Inc. <br>ASK JEEVES, ASK.COM and the JEEVES DESIGN are service marks of Ask Jeeves, Inc.<br>All other brands are property of their respective owners. Patent pending.</font><br></font></td>
+    </tr>
+    </tbody></table>
     </div>
-</body>
-</html>
+    </layer><!--<FONT SIZE=-222></FONT>-->
+    <img src="src/i.gif" width="1" height="1">
+    
+    
+    </body></html>
