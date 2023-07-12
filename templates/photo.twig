@@ -68,7 +68,7 @@
         <td valign="top"><img src="{{ url_for('static', filename='img/logoright.gif') }}" alt="Ask Jeeves (SM)"
             width="103" vspace="4" height="70"></td>
         <td nowrap="nowrap" align="center">
-          <font size="4" face="Arial, Helvetica" color="#CC0000">Occupation text here(?)</b></font>
+          <font id="occ-text" size="4" face="Arial, Helvetica" color="#CC0000"></b></font>
         </td>
         <td align="center"><a
             href="https://web.archive.org/web/20010119004500/http://askjeeves.com/main/ct.asp?to=http://ad.doubleclick.net/clk;1225507;4242638;c?http%3A%2F%2Fpj%2Eask%2Ecom%2Fe%2Dcentives%2Fpromo%2Easp&amp;id=209.247.40.207"><img
@@ -79,6 +79,7 @@
       </tr>
       <tr align="CENTER">
         <td colspan="3" width="570">
+          <h3 id="loader">Loading a beautiful image...</h3>
           <img style="width: 40%" id="jeeves-says" src={{ url_for('static', filename='img/loading.gif' ) }} />
         </td>
         <td rowspan="2"><img src="{{ url_for('static', filename='img/slashRight.gif') }}" width="8" height="110"></td>
@@ -157,7 +158,12 @@
       formattedParams[k] = v;
     }
 
-    loadImage(formattedParams).then(data => {
+    loadImage(formattedParams).then((data) => {
+      const p = document.getElementById('occ-text');
+      p.text = occ;
+      console.log('loading the image data', data)
+      const loader = document.getElementById('loader');
+      loader.remove();
       const image = document.getElementById('jeeves-says');
       if (image) {
         image.src = data;
