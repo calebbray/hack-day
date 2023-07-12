@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Modern Page</title>
+
+  <!-- Water.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+  </style>
+  <script src="{{ url_for('static', filename='js/fetcher.js' ) }}"></script>
+</head>
+
+<body>
+  <header class="water-header">
+    <h1>My Website</h1>
+    <nav class="water-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photo">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="water-container">
+    <h1>Jeeves Says</h1>
+    <p>{{ name }}</p>
+    <button onclick="logSomething()">Click me Daddy</button>
+  </div>
+</body>
+
+</html>
