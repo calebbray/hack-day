@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/photo')
 def photo_time():
-    name = "foobarbaz"
-    return render_template('photo.twig', name=name)
+    query = request.args.get('q')
+    return render_template('photo.twig', q=query)
 
 @app.route('/')
 def hello():
